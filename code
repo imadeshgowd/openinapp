@@ -1,0 +1,110 @@
+package MobileTesting.OpenInnAppp;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+
+public class innapp {
+	
+	@Test
+
+	public void AppiumTest() throws MalformedURLException
+	
+	{
+		AppiumServiceBuilder service = new AppiumServiceBuilder().withAppiumJS(new File("//usr//local//lib//node_modules//appium//build//lib//main.js"));
+			withIPAddress("127.0.0.1").usingPort(4723).build();
+			service.start();
+		UiAutomator2Options options = new UiAutomator2Options();
+		options.setDeviceName("madeshinapp");
+		options.setApp("//Users//madeshgowd//eclipse-workspace//OpenInnAppp//src//test//java//resources//OpeninApp.apk");
+		
+		
+		
+		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+		
+		
+		//Automation of OpenInApp Starts Now
+		driver.findElement(AppiumBy.accessibilityId("Login with Phone"));
+		
+		//Find the mobile number input field and enter the number
+		mobile_number_input = driver.find_element(By.ID, 'Enter Phone Number")  # Replace with the actual ID
+		mobile_number_input.send_keys("8688960997")
+		
+		//Find the login button and click it
+		login_button = driver.find_element(By.XPATH, "//*[@id=\"__next\"]/div/div/div[4]/div/div/div[4]/form/button")  
+		login_button.click()
+		
+		Thread.sleep(5000);
+		
+		//Fetching The OTP
+		received_message = "Your OTP for OpeninApp is 669398"
+
+		otp_pattern = re.compile(r'\b\d{6}\b');
+		match = re.search(otp_pattern, received_message);
+
+		if match:
+		    otp = match.group()
+		    print(f"Extracted OTP: {otp}")
+		else:
+		    print("No OTP found in the message.")
+
+		//creating link
+		    driver.findElement(By.xpath("//*[@id=\"container\"]/div[2]/div[1]/div/div/div/button")).click();
+        driver.findElement(By.xpath("//*[@id=\"Enter a link\"]")).sendKeys("https://www.youtube.com/@OpeninApp");
+        driver.findElement(By.xpath("//*[@id=\"Create Link Button\"]")).click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div/div/div[4]/div/div[3]/button[2]/div/p"))
+        .click();
+        
+        //
+        public class Instagram {
+        	
+        	@Test
+
+        	public void AppiumTest() throws MalformedURLException
+        	
+        	{
+        		AppiumServiceBuilder service = new AppiumServiceBuilder().withAppiumJS(new File("//usr//local//lib//node_modules//appium//build//lib//main.js"));
+        			withIPAddress("127.0.0.1").usingPort(4723).build();
+        			service.start();
+        		UiAutomator2Options options = new UiAutomator2Options();
+        		options.setDeviceName("madeshinapp");
+        		options.setApp("/Users/madeshgowd/eclipse-workspace/OpenInnAppp/src/test/java/resources/instagram-311-0-0-32-118.apk");
+        		
+        		
+        		
+        		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+        
+        //open instagram
+        driver.findElement(By.xpath("//*[@id=\"mount_0_0_VG\"]/div/div/div[2]/div/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[5]/div/span/div/a/div/div/div/div/span/img")).click();
+
+        // Click on "Edit Profile"
+        driver.findElement(By.xpath( "//*[@id=\"mount_0_0_VG\"]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/div[2]/section/main/div/header/section/div[3]/div/div[1]/a")).click();
+
+        // Click on "Links"
+        driver.findElement(By.xpath("//*[@id=\"mount_0_0_VG\"]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/section/main/div/div/div[2]/input")).click();
+
+        // Add the URL to the input field
+        driver.findElement(By.xpath("//android.widget.EditText[@text='Add your links here']")).sendKeys("https://www.youtube.com/@OpeninApp");
+
+        // Click on "Done"
+        driver.findElement(By.xpath("//android.widget.TextView[@text='Done']")).click();
+        
+        
+        //clicking on the link
+       driver.findElement(By.xpath("")) 
+       
+        long redirectionTime = (endTime - startTime) / 1000;
+        System.out.println("Redirection Time: " + redirectionTime + " seconds");
+        driver.quit();
+	}
+
+	
+
+		
+	
+
+
